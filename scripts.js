@@ -1,19 +1,27 @@
-const h1Text = document.getElementById('titulo')
-h1Text.innerText = "Aplicação de texto no elemento h1 com js."
 
-document.querySelector('ul').innerHTML =
+
+const produto = document.querySelector('body')
+produto.innerHTML = 
 `
-<li>ul li 1</li>
-<li>ul li 2</li>
-<li>ul li 3</li>
+<ul style="list-style: none">
+    <li>
+        <h1>Ventilador Arno</h1>
+    </li>
+    <li>
+        <img src="/ventilador.png" style="width: 200px">
+    </li>
+    <li style="color: blue">
+        R$ 125,00
+    </li>
+    <li>
+        Ventilador de mesa silencioso.
+    </li>
+</ul>
 `
 
-const aText = document.querySelector('a')
-aText.innerText = "Link exemplo"
+const promo = document.createElement('h1')
+promo.innerText = 'Não perca essa promoção imperdível!'
+promo.id = 'promo'
 
-document.getElementById('lista-ordenada').innerHTML = 
-`
-<li><a href="https://talentocloud.joyclass.com/">Proz Talento Cloud</a></li>
-<li><a href="https://www.youtube.com/">Youtube</a></li>
-<li><a href="https://www.linkedin.com/">LinkedIn</a></li>
-`
+const promoBody = document.querySelector('body')
+promoBody.appendChild(promo)
